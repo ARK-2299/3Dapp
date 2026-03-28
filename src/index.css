@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-label: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --color-primary: #124af0;
+  --color-primary-dim: #003eda;
+  --color-primary-container: #dde1ff;
+  --color-on-primary: #f9f6ff;
+  --color-on-primary-container: #003dd8;
+
+  --color-secondary: #5e5f63;
+  --color-secondary-container: #e3e2e7;
+  --color-on-secondary: #f9f8fe;
+  --color-on-secondary-container: #515156;
+
+  --color-tertiary: #8e2fbd;
+  --color-tertiary-container: #ce6ffd;
+  --color-on-tertiary: #fff7fc;
+  --color-on-tertiary-container: #2f0046;
+
+  --color-surface: #f9f9fe;
+  --color-surface-dim: #d3dae9;
+  --color-surface-bright: #f9f9fe;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f2f3fa;
+  --color-surface-container: #ebeef7;
+  --color-surface-container-high: #e4e8f3;
+  --color-surface-container-highest: #dce3f0;
+
+  --color-on-surface: #2c333d;
+  --color-on-surface-variant: #595f6a;
+  --color-outline: #747b86;
+  --color-outline-variant: #acb2bf;
+
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+}
+
+@layer base {
+  body {
+    @apply bg-surface font-body text-on-surface antialiased;
+    min-height: 100dvh;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-surface-container-lowest/60 backdrop-blur-[24px] border border-white/40;
+  }
+
+  .ghost-border {
+    @apply outline outline-outline-variant/15;
+  }
+
+  .ethereal-glow {
+    background: radial-gradient(circle at 50% 50%, rgba(18, 74, 240, 0.05) 0%, transparent 70%);
+  }
+
+  .spatial-gradient {
+    background: radial-gradient(circle at 50% 50%, rgba(18, 74, 240, 0.08) 0%, rgba(249, 249, 254, 1) 70%);
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap');

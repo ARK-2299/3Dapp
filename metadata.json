@@ -1,0 +1,7 @@
+{
+  "name": "MetaFigure",
+  "description": "AI-powered 3D avatar studio for creating high-fidelity digital collectibles from portraits.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
